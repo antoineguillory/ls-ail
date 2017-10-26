@@ -88,11 +88,7 @@ int main(int argc, char* argv[]) {
 
 
 bool file_exists(char* file) {
-    if (access(file, F_OK ) != -1 ) {
-        return true;
-    } else {
-        return false;
-    }
+    return (access(file, F_OK ) != -1 );
 }
 
 char * get_permissions(mode_t mode){
